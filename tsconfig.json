@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "@onelabs/wallet",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "declarations",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noImplicitReturns": true,
+    "outDir": "lib",
+    "strict": true,
+    "target": "ESNext"
+  },
+  "exclude": ["declarations", "lib", "node_modules"],
+  "include": [
+    "commitlint.config.js",
+    "rollup.config.mjs",
+    "rollup.config.types.mjs",
+    "src"
+  ]
+}

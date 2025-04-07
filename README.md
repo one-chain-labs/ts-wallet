@@ -14,7 +14,7 @@ npm install @onelabs/wallet --save
 <script src="https://unpkg.com/@onelabs/wallet@latest/lib/index.iife.js"></script>
 
 <!-- Production (minified) -->
-<script src="https://unpkg.com/@onelabs/wallett@latest/lib/index.iife.min.js"></script>
+<script src="https://unpkg.com/@onelabs/wallet@latest/lib/index.iife.min.js"></script>
 ```
 
 ## Testing

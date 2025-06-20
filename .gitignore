@@ -6,3 +6,4 @@ declarations
 lib
 doc
 test/user.json
+scripts/parse_swagger.js

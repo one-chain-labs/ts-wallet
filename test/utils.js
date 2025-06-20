@@ -15,6 +15,7 @@ const Path             = require('path');
 const _                = require('lodash');
 const NodeRSA          = require('node-rsa');
 
+
 const provider = new SuiClient({url: getFullnodeUrl('devnet')});
 
 const geSystemState = async () => {
@@ -97,6 +98,7 @@ const rsaEncrypt = (options, privateKey) => {
 
 const init = async () => {
   const cluster    = clusterApiUrl('devnet', false);
+  console.log({cluster})
   const connection = new Connection(cluster, {});
 
   checkFile(config.userProfilePath);

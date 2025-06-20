@@ -2,7 +2,7 @@ const _                = require('lodash');
 const assert           = require('assert');
 const {Ed25519Keypair} = require('@onelabs/sui/keypairs/ed25519');
 const {Transaction}    = require('@onelabs/sui/transactions');
-const Bsc              = require('@onelabs/bcs');
+const Bcs              = require('@onelabs/bcs');
 const Utils            = require('./utils');
 
 
@@ -136,7 +136,7 @@ describe('Connection', function() {
       client: Utils.provider,
       onlyTransactionKind,
     });
-    const rawTransaction    = Bsc.toB64(transactionBytes);
+    const rawTransaction    = Bcs.toB64(transactionBytes);
     //Request one chain wallet append gas sponsor payment
     sponsorTransaction      = await connection.buildSponsorTransaction({
       address:   receiver,
@@ -153,7 +153,7 @@ describe('Connection', function() {
 
   it('# sendSponsorTransaction', async function() {
     //Use the receiver private key to sign the transaction
-    let {signature} = await receiverKeypair.signTransaction(Bsc.fromBase64(sponsorTransaction.rawTransaction));
+    let {signature} = await receiverKeypair.signTransaction(Bcs.fromBase64(sponsorTransaction.rawTransaction));
 
     //Request one chain wallet send signed tx
     let transaction = await connection.sendSponsorTransaction({

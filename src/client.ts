@@ -60,12 +60,6 @@ export class Client {
     };
     const response = await this.provider.request(options);
     if (!isSuccess(response)) {
-      console.log({
-        traceId: this.provider.defaults.headers['X-B3-Traceid'],
-        path: url,
-        params: data,
-        result: response.data,
-      });
       throw new OneChainQuestError(
         Object.assign({}, response.data, {path: url}),
       );

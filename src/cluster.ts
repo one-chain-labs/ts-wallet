@@ -5,7 +5,7 @@ const endpoint = {
     mainnet: '',
   },
   https: {
-    devnet: 'https://api.devnet.solana.com',
+    devnet: 'http://hchain-api-server-svc.dev.svc.cluster.local:8080',
     testnet: '',
     mainnet: '',
   },

@@ -1,6 +1,6 @@
 {
   "name": "@onelabs/wallet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One chain wallet for zklogin js sdk",
   "publishConfig": {
     "access": "public"
@@ -30,7 +30,7 @@
     "compile:typedefs": "./scripts/typegen.sh",
     "clean": "rimraf ./doc ./declarations ./lib",
     "dev": "cross-env NODE_ENV=development rollup -c --watch",
-    "publish-packages": "semantic-release --repository-url git@https://gitlab.myhhhhh.com/hchainapps/onechain-sdk-js.git",
+    "publish-packages": "semantic-release --repository-url git@https://github.com/one-chain-labs/ts-wallet.git",
     "test:prettier": "prettier --check '{,{src,test}/**/}*.{j,t}s'",
     "test:prettier:fix": "pnpm prettier --write '{,{src,test}/**/}*.{j,t}s'",
     "test:typecheck": "tsc --noEmit",
